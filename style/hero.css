@@ -59,7 +59,7 @@
 
 @media(max-width: 1440px){
     .hero__img{
-        width: 41vw;
+        max-width: 100%;
     }
 
     .hero__left{
@@ -72,11 +72,11 @@
     }
 
     .hero__title{
-        font-style: 60px;
+        font-size: 60px;
     }
 
     .hero__description{
-        font-style: 24px;
+        font-size: 24px;
     }
 
 }
@@ -91,12 +91,12 @@
     }
 
     .hero__title{
-        font-style: 50px;
+        font-size: 50px;
         margin-bottom: 25px;
     }
 
     .hero__description{
-        font-style: 20px;
+        font-size: 20px;
         margin-bottom: 20px;
     }
 
@@ -123,12 +123,12 @@
     }
 
     .hero__title{
-        font-style: 40px;
+        font-size: 40px;
         margin-bottom: 20px;
     }
 
     .hero__description{
-        font-style: 16px;
+        font-size: 16px;
     }
 
     .hero__down{
@@ -148,7 +148,7 @@
     }
 
     .hero__img{
-        width: 100%;
+        max-width: 100%;
     }
 
     .hero__left{
@@ -162,12 +162,12 @@
     }
 
     .hero__title{
-        font-style: 28px;
+        font-size: 28px;
         margin-bottom: 16px;
     }
 
     .hero__description{
-        font-style: 14px;
+        font-size: 14px;
         margin-bottom: 16px;
     }
 

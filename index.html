@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style/logo.css">
     <link rel="stylesheet" href="style/burger.css">
     <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/hero.css">
 
 </head>
 <body>
@@ -24,7 +25,7 @@
                 <use xlink:href="./images/logo.svg#logo"></use>
             </svg>
 
-            <button title="" class="burger header__burger">
+            <button title="s" class="burger header__burger">
                 <span class="burger__line"></span>
             </button> 
 
@@ -41,14 +42,25 @@
                 </ul>
             </nav>
 
-            <button class="header__consultation">Консультация</button> 
+            <button title="Консультация" class="header__consultation">Консультация</button> 
         </div>
     </header>
     <main>
         <section class="hero">
-            <div class="container">
-            <h1>Встречайте Новый Год с елкой</h1>
-        </div>
+            <div class="container hero__container">
+                <div class="hero__left">
+                    <img class="hero__img" src="images/photo.jpg" width="705" height="769" alt="Елка у камина">
+                </div>
+                
+                <div class="hero__right">
+                    <h1 class="hero__title">Встречайте Новый Год с&nbsp;ёлкой!</h1>
+                    <p class="hero__description">У нас только самые лучшие елки!</p>
+                    <a class="hero__down" href="#one">
+                        <img class="hero__down-img" src="images/bauble_PNG340щ 1.png" width="113" height="139" alt="Кнопка заказать">
+                        <span>Заказать</span>
+                    </a>
+                </div>
+            </div>
         </section>
         <section class="features">
             <div class="container">
@@ -84,5 +96,75 @@
                 
         </div>
     </footer>
+    <style>
+        body{
+            position: relative;
+        }
+
+        body:after{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url(images/elka.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .garland{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 36px;
+            background-image: url(images/christmas.png);
+            pointer-events: none;
+            z-index: 999;
+        }
+        .garland_1{
+            background-position: 0 0;
+        }    
+
+        .garland_2{
+            background-position: 0 -36px;
+        }
+        .garland_3{
+            background-position: 0 -72px;
+        }
+        .garland_4{
+            background-position: 0 -108px;
+        }
+    </style>
+
+    <div id ="garland" class="garland"></div>
+    <script>
+        const garland = document.querySelector('#garland')
+        let order = 1;
+        setInterval(()=>{
+            switch(order) {
+                case 1:
+                    garland.classList.add('garland_2');
+                    garland.classList.remove('garland_1');
+                    order = 2;
+                    break;
+                case 2:
+                    garland.classList.add('garland_3');
+                    garland.classList.remove('garland_2');
+                    order = 3;
+                    break;
+                case 3:
+                    garland.classList.add('garland_4');
+                    garland.classList.remove('garland_3');
+                    order = 4;
+                    break;
+                case 4:
+                    garland.classList.add('garland_1');
+                    garland.classList.remove('garland_4');
+                    order = 1;
+                    break;    
+            } 
+        },500)   
+    </script>
 </body>
 </html>

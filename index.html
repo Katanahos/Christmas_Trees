@@ -9,6 +9,23 @@
     <link rel="preload" href="fonts/cormorant-v11-latin_cyrillic-700.woff2" as="font"
         type="font/woff2" crossorigin>
 
+    <style>
+    :root {
+        --main-color: #ffffff;
+        --second-color: #262626;
+        --one-color: #00654E;
+        --two-color: #006E55;
+        --three-color: #005844;
+        --main-bg-color: #034939;
+        --second-bg-color: #C0B487;
+        --trigger-color: #E5AB39;
+        --url-features-one: url("../images/tree.svg");
+        --url-features-two: url("../images/christmas-decorations.svg");
+        --url-features-three: url("../images/flowers.svg");
+        --url-features-four: url("../images/delivery-truck.svg");
+    }</style>
+
+
     <link rel="stylesheet" href="style/default.css">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/header.css">
@@ -16,6 +33,10 @@
     <link rel="stylesheet" href="style/burger.css">
     <link rel="stylesheet" href="style/navigation.css">
     <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/features.css">
+    <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/pay.css">
+    <link rel="stylesheet" href="style/option-pay.css">
 
 </head>
 <body>
@@ -41,7 +62,6 @@
                         <a href="" class="navigation__link">Как оплатить</a></li>
                 </ul>
             </nav>
-
             <button title="Консультация" class="header__consultation">Консультация</button> 
         </div>
     </header>
@@ -64,30 +84,113 @@
         </section>
         <section class="features">
             <div class="container">
-                
+                <h2 class="visually-hidden">Преимущества</h2>
+                <ul class="features__list">
+                    <li class="features__item features__item_one">
+                        Пушистые и ароматные йлочки
+                    </li>
+                    <li class="features__item features__item_two">
+                        Набор ёлочных украшений в подарок
+                    </li>
+                    <li class="features__item features__item_three">
+                        Ёлочки сохраняют свежесть надолго 
+                    </li>
+                    <li class="features__item features__item_four">
+                        Доставим ёлочку за наш счёт!
+                    </li>
+                </ul>
             </div>       
         </section>
         <section class="product" id="one">
-            <div class="container">
-                
+            <div class="container product__container">
+                <div class="product__content">
+                    <h2 class="prosuct__title">Пихта Фразера</h2>
+
+                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+
+                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a class="product__button product__button_more" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <img class="product__picture" src="images/unsplash_Azii9_cmPtA.jpg" width="630" height="590" alt="Пихта Фразера">
             </div>
         </section>
 
         <section class="product" id="two">
-            <div class="container">
-                
+            <div class="container product__container">
+                <div class="product__content">
+                    <h2 class="prosuct__title">Русская ель</h2>
+
+                    <p class="product__features">Русская ель — наиболее традиционная разновидность рождественских деревьев, которую можно встретить в большинстве советских фильмов про новый год</p>
+
+                    <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах, короткие колючие иголки и сравнительно менее пышная крона</p>
+
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a class="product__button product__button_more" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <img class="product__picture" src="images/Ель.jpg" width="630" height="590" alt="Русская ель">
             </div>
         </section>
 
         <section class="product" id="three">
-            <div class="container">
-                
+            <div class="container product__container">
+                <div class="product__content"> 
+                    <h2 class="prosuct__title">Сибирская пихта</h2>
+
+                    <p class="product__features">Пихта сибирская является одной из самых красивых и ароматных хвойных пород и ее часто можно встретить в парках и садах</p>
+
+                    <p class="product__description">Хвоя Сибирской пихты в отличии от еловой крупнее, зеленее, совершенно не колючая и мягкая как трава</p>
+
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a class="product__button product__button_more" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <img class="product__picture" src="images/Пихта.jpg" width="630" height="590" alt="Сибирская пихта">
             </div>
         </section>
 
         <section class="pay">
             <div class="container">
-                
+                <h2 class="pay__title">Как можно оплатить</h2>
+                <ul class="pay__list">
+                    <li class="pay__item">
+                        <article class="pay__option_pay option-pay">
+                            <div class="option-pay__picture-wrapper">
+                                <img src="images/cards.svg" alt="Платежные системы">
+                            </div>
+                            <h3 class="option-pay__title">Банковской картой</h3>
+                            <p class="option-pay__description">Visa/Mastercard или PayPal из любой страны</p>
+                        </article>
+                    </li>
+
+                    <li class="pay__item">
+                        <article class="pay__option_pay option-pay">
+                            <div class="option-pay__picture-wrapper">
+                                <svg class="header__logo logo" viewBox="0 0 164 76" role="img" area-label="Логотип компании" >
+                                    <use xlink:href="./images/logo.svg#logo"></use>
+                                </svg>
+                            </div>
+                            <h3 class="option-pay__title">Беспроцентная рассрочка от нас</h3>
+                            <p class="option-pay__description">Мы делим платеж на 2 части. Первую часть вы оплачиваете сразу, вторую через 15 дней после получения дерева</p>
+                        </article>
+                    </li>
+
+                    <li class="pay__item">
+                        <article class="pay__option_pay option-pay">
+                            <div class="option-pay__picture-wrapper">
+                                <img src="images/Тинькофф.svg" alt="">
+                            </div>
+                            <h3 class="option-pay__title">Беспроцентная рассрочка от Тинькофф</h3>
+                            <p class="option-pay__description">Рассрочка на 3 месяца без первоначального платежа</p>
+                        </article>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -136,7 +239,6 @@
             background-position: 0 -108px;
         }
     </style>
-
     <div id ="garland" class="garland"></div>
     <script>
         const garland = document.querySelector('#garland')

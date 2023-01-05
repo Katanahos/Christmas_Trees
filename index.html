@@ -38,9 +38,12 @@
     <link rel="stylesheet" href="style/pay.css">
     <link rel="stylesheet" href="style/option-pay.css">
     <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/overlay.css">
+    <link rel="stylesheet" href="style/modal.css">
 
+    <script src="/Js/burger.js" defer></script>
     <script src="/Js/garland.js" defer></script>
-    <script src="/Js/snow.js"></script>
+    <script src="/Js/snow.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -49,20 +52,20 @@
                 <use xlink:href="./images/logo.svg#logo"></use>
             </svg>
 
-            <button title="s" class="burger header__burger">
+            <button title="navigation" class="burger header__burger">
                 <span class="burger__line"></span>
             </button> 
 
             <nav class="header__navigation navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Пихта Файзера</a></li>
+                        <a href="#one" class="navigation__link">Пихта Файзера</a></li>
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Русская ель</a></li>
+                        <a href="#two" class="navigation__link">Русская ель</a></li>
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Сибирская пихта</a></li>
+                        <a href="#three" class="navigation__link">Сибирская пихта</a></li>
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Как оплатить</a></li>
+                        <a href="#pay" class="navigation__link">Как оплатить</a></li>
                 </ul>
             </nav>
             <button title="Консультация" class="header__consultation">Консультация</button> 
@@ -90,7 +93,7 @@
                 <h2 class="visually-hidden">Преимущества</h2>
                 <ul class="features__list">
                     <li class="features__item features__item_one">
-                        Пушистые и ароматные йлочки
+                        Пушистые и ароматные ёлочки
                     </li>
                     <li class="features__item features__item_two">
                         Набор ёлочных украшений в подарок
@@ -158,7 +161,7 @@
             </div>
         </section>
 
-        <section class="pay">
+        <section class="pay" id = "pay">
             <div class="container">
                 <h2 class="pay__title">Как можно оплатить</h2>
                 <ul class="pay__list">
@@ -203,8 +206,8 @@
                 <use xlink:href="./images/logo.svg#logo"></use>
             </svg>
             <address class="footer__contacts">
-                <a class="footer__items footer__link" href="mailto:katanahos@gmail.com">katanahos@gmail.com</a>
-                <a class="footer__items footer__link" href="tel:+375333795327">+375(33)379-53-27</a>
+                <a class="footer__items footer__link" href="mailto:Christmas@gmail.com">Christmas@gmail.com</a>
+                <a class="footer__items footer__link" href="tel:+375333333333">+375(33)333-33-33</a>
             </address>
             <ul class="footer__list-social">
                 <li class="footer__item-social">
@@ -238,5 +241,23 @@
             </ul>   
         </div>
     </footer>
+
+    <div class="overlay overlay_order">
+        <div class="modal">
+            <button class="modal__close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#00654E"/>
+                </svg>
+            </button>
+
+            <h2 class="modal__title">Оформить заказ</h2>
+        </div>
+    </div>
+
+    <div class="overlay overlay_consultation">
+        <div class="modal">
+            
+        </div>
+    </div>
 </body>
 </html>

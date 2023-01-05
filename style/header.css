@@ -65,7 +65,7 @@
     .header__burger{
         grid-row: 1;
         grid-column: 1;
-        justify-self: start;
+        justify-self: center;
     }
 
     .header__logo{
@@ -104,5 +104,9 @@
     .header__consultation {
         padding: 5px 14px ;
         font-size: 12px;
+    }
+
+    .header__burger{
+        justify-self: end;
     }
 }

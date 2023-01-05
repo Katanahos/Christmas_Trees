@@ -69,6 +69,6 @@ const createGarland = () => {
                 order = 1;
                 break;    
         } 
-    },500)   
+    },600)   
 }
 createGarland();

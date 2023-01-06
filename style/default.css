@@ -2,33 +2,36 @@
     font-family: Cormorant;
     font-weight: 700;
     src: local("Cormorant"), local("Cormorant-Bold"),
-    url("../fonts/cormorant-v11-latin_cyrillic-700.woff2") format("woff2"),
-    url("../fonts/cormorant-v11-latin_cyrillic-700.woff") format("woff");
+        url("../fonts/cormorant-v11-latin_cyrillic-700.woff2") format("woff2"),
+        url("../fonts/cormorant-v11-latin_cyrillic-700.woff") format("woff");
     font-display: swap;
 }
 
-html{
+html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-*,*::after, *::before{
+*,
+*::after,
+*::before {
     box-sizing: inherit;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     letter-spacing: 0.04em;
-    color: var(--main-color) ;
+    color: var(--main-color);
 }
 
-h1,h2{
+h1,
+h2 {
     font-family: Cormorant, serif;
 }
 
@@ -38,33 +41,38 @@ h1,h2{
     padding: 0 50px;
 }
 
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
     margin: 0;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-a{
+
+a {
     color: inherit;
     text-decoration: none;
 }
 
-button, input{
+button,
+input {
     font: inherit;
 }
 
-button{
-    cursor: pointer ;
+button {
+    cursor: pointer;
 }
 
-.visually-hidden{
+.visually-hidden {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
@@ -76,27 +84,19 @@ button{
 }
 
 @media (max-width:1440px) {
-    .container{
+    .container {
         padding: 0 42px;
     }
 }
 
-@media(max-width: 1200px){
-
-}
-
-@media(max-width: 1000px){
-    .container{
+@media(max-width: 1000px) {
+    .container {
         padding: 0 39px;
     }
 }
 
-@media(max-width: 760px){
-
-}
-
-@media(max-width: 580px){
-    .container{
+@media(max-width: 580px) {
+    .container {
         padding: 0 10px;
     }
 }

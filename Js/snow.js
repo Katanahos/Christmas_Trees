@@ -1,8 +1,8 @@
 const createSnow = (n) => {
     const style = document.createElement('style');
-    
-    style.textContent = 
-    `
+
+    style.textContent =
+        `
     body{
         position: relative
     }
@@ -45,22 +45,22 @@ const createSnow = (n) => {
         snowItem.classList.add('snow');
 
         snowItem.style.cssText = `
-            left: ${Math.random()*document.documentElement.clientWidth}px;
+            left: ${Math.random() * document.documentElement.clientWidth}px;
             opacity: ${Math.random()};
-            animation-duration: ${(Math.random()*n/2)+2}s;
+            animation-duration: ${(Math.random() * n / 2) + 2}s;
             background-image: url('images/snowflake${start}.svg');
-            background-size: ${Math.random()*30}px;
+            background-size: ${Math.random() * 30}px;
         `
         start++;
-        if(start=== count){
-            start=1;
+        if (start === count) {
+            start = 1;
         }
         document.body.append(snowItem)
-        
-        setTimeout(() =>{
-            snowItem.remove();    
+
+        setTimeout(() => {
+            snowItem.remove();
         }, 5000)
-    }   
+    }
 
     setInterval(createSnowItem, 100)
 };

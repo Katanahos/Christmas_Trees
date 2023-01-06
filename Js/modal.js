@@ -4,7 +4,7 @@ const order = overlayOrder.querySelector('.modal__order');
 const buttonConsult = document.querySelector('.header__consultation');
 const overlayConsult = document.querySelector('.overlay__consultation');
 
-buttonsOrder.forEach((buttonOrder) => { 
+buttonsOrder.forEach((buttonOrder) => {
     buttonOrder.addEventListener('click', () => {
         overlayOrder.classList.add('overlay_active');
         order.value = buttonOrder.dataset.order;
@@ -14,7 +14,7 @@ buttonsOrder.forEach((buttonOrder) => {
 overlayOrder.addEventListener('click', event => {
     const target = event.target;
 
-    if(target===overlayOrder|| target.closest('.modal__close')){
+    if (target === overlayOrder || target.closest('.modal__close')) {
         overlayOrder.classList.remove('overlay_active');
     }
 });
@@ -26,7 +26,7 @@ buttonConsult.addEventListener('click', () => {
 overlayConsult.addEventListener('click', event => {
     const target = event.target;
 
-    if(target===overlayConsult|| target.closest('.modal__close')){
+    if (target === overlayConsult || target.closest('.modal__close')) {
         overlayConsult.classList.remove('overlay_active');
     }
 });

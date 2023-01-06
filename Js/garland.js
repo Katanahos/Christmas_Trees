@@ -5,7 +5,7 @@ const createGarland = () => {
 
     const style = document.createElement('style');
     style.textContent =
-    `body{
+        `body{
         position: relative;
     }
 
@@ -46,8 +46,8 @@ const createGarland = () => {
     document.head.append(style)
 
     let order = 1;
-    setInterval(()=>{
-        switch(order) {
+    setInterval(() => {
+        switch (order) {
             case 1:
                 garland.classList.add('garland_2');
                 garland.classList.remove('garland_1');
@@ -67,8 +67,8 @@ const createGarland = () => {
                 garland.classList.add('garland_1');
                 garland.classList.remove('garland_4');
                 order = 1;
-                break;    
-        } 
-    },600)   
+                break;
+        }
+    }, 600)
 }
 createGarland();

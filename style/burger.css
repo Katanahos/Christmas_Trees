@@ -1,4 +1,4 @@
-.burger{
+.burger {
     display: none;
     position: relative;
     --width: 21px;
@@ -12,7 +12,7 @@
     border: none;
 }
 
-.burger__line{
+.burger__line {
     position: absolute;
     left: 0;
     right: 0;
@@ -24,7 +24,8 @@
 
 }
 
-.burger::before, .burger::after{
+.burger::before,
+.burger::after {
     content: '';
     position: absolute;
     left: 0;
@@ -34,43 +35,38 @@
     transition: transform 0.3s, top 0.3s ease-out;
 }
 
-.burger::before{
+.burger::before {
     top: 0;
 }
 
-.burger::after{
+.burger::after {
     bottom: 0;
 }
 
-.burger_active .burger__line{
+.burger_active .burger__line {
     transform: translateY(-50%) scale(0);
 }
 
-.burger_active::before{
+.burger_active::before {
     top: 50%;
     transform: rotate(-45deg);
 }
 
-.burger_active::after{
+.burger_active::after {
     top: 50%;
     transform: rotate(45deg);
     bottom: auto;
 }
 
-@media(max-width: 1000px){
-    .burger{
+@media(max-width: 1000px) {
+    .burger {
         display: block;
         z-index: 1001;
     }
 }
 
-
-@media(max-width: 768px){
-
-}
-
-@media(max-width: 580px){
-    .burger{
+@media(max-width: 580px) {
+    .burger {
         --width: 18px;
         --height: 12px;
     }

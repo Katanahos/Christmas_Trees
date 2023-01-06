@@ -1,24 +1,26 @@
-.header{
+.header {
     color: var(--second-color);
     padding: 27px 0;
 }
 
-.header__container{
+.header__container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
 }
 
-.header__logo{
+.header__logo {
     justify-self: start;
 }
-.header__navigation{
+
+.header__navigation {
     justify-self: center;
 }
-.header__consultation{
+
+.header__consultation {
     justify-self: end;
     padding: 14px 36px;
-    background-color:var(--trigger-color);
+    background-color: var(--trigger-color);
     border-radius: 10px;
     font-size: 18px;
     line-height: 130%;
@@ -28,59 +30,59 @@
     border-radius: 10px;
     transition-property: background-color, box-shadow, outline-color;
     transition-duration: .3s;
-    transition-timing-function: ease-in-out ;
+    transition-timing-function: ease-in-out;
 }
 
-.header__consultation:hover{
+.header__consultation:hover {
     background-color: var(--main-bg-color);
 }
 
-.header__consultation:active{
+.header__consultation:active {
     background-color: var(--main-bg-color);
     box-shadow: 0px 2px 6px rgba(2, 67, 0, 0.36);
 }
 
-.header__consultation:focus{
+.header__consultation:focus {
     outline-color: var(--second-color);
 }
 
-@media(max-width:1440px){
+@media(max-width:1440px) {
     .header__consultation {
-        padding: 12px 30px ;
+        padding: 12px 30px;
         font-size: 16px;
         border-radius: 8px;
     }
 }
 
-@media(max-width:1000px){
-    .header{
+@media(max-width:1000px) {
+    .header {
         padding: 20px 0;
     }
 
-    .header__container{
+    .header__container {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 38px;
     }
 
-    .header__burger{
+    .header__burger {
         grid-row: 1;
         grid-column: 1;
         justify-self: center;
     }
 
-    .header__logo{
+    .header__logo {
         grid-row: 1;
         grid-column: 2;
         justify-self: center;
     }
 
-    .header__navigation{
+    .header__navigation {
         grid-row: 2;
         grid-column: 1/4;
     }
 
     .header__consultation {
-        padding: 8px 20px ;
+        padding: 8px 20px;
         font-size: 14px;
         border-radius: 6px;
         grid-row: 1;
@@ -88,25 +90,22 @@
     }
 }
 
-@media(max-width:768px){
-    
-}
-
-@media(max-width:580px){
-    .header{
+@media(max-width:580px) {
+    .header {
         padding-top: 16px;
         padding-bottom: 20px;
     }
-    .header__container{
+
+    .header__container {
         gap: 15px;
     }
 
     .header__consultation {
-        padding: 5px 14px ;
+        padding: 5px 14px;
         font-size: 12px;
     }
 
-    .header__burger{
+    .header__burger {
         justify-self: end;
     }
 }

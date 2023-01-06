@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="style/overlay.css">
     <link rel="stylesheet" href="style/modal.css">
 
+    <script src="/Js/modal.js" defer></script>
     <script src="/Js/burger.js" defer></script>
     <script src="/Js/garland.js" defer></script>
     <script src="/Js/snow.js" defer></script>
@@ -117,7 +118,7 @@
                     <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
 
                     <div class="product__button-wrapper">
-                        <button class="product__button product__button_order">Заказать</button>
+                        <button class="product__button product__button_order" data-order="Пихта Фразера">Заказать</button>
                         <a class="product__button product__button_more" href="#">Подробнее</a>
                     </div>
                 </div>
@@ -135,7 +136,7 @@
                     <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах, короткие колючие иголки и сравнительно менее пышная крона</p>
 
                     <div class="product__button-wrapper">
-                        <button class="product__button product__button_order">Заказать</button>
+                        <button class="product__button product__button_order" data-order="Русская ель">Заказать</button>
                         <a class="product__button product__button_more" href="#">Подробнее</a>
                     </div>
                 </div>
@@ -153,7 +154,7 @@
                     <p class="product__description">Хвоя Сибирской пихты в отличии от еловой крупнее, зеленее, совершенно не колючая и мягкая как трава</p>
 
                     <div class="product__button-wrapper">
-                        <button class="product__button product__button_order">Заказать</button>
+                        <button class="product__button product__button_order" data-order="Сибирская пихта">Заказать</button>
                         <a class="product__button product__button_more" href="#">Подробнее</a>
                     </div>
                 </div>
@@ -242,21 +243,57 @@
         </div>
     </footer>
 
-    <div class="overlay overlay_order">
+    <div class="overlay overlay__order">
         <div class="modal">
             <button class="modal__close">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#00654E"/>
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"/>
                 </svg>
             </button>
 
             <h2 class="modal__title">Оформить заказ</h2>
+
+            <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <label class="modal__label">
+                    <span class="modal__label-text">ФИО</span>
+                    <input class="modal__input" required name="bio" type="text" placeholder="Введите ваше ФИО">
+                </label>
+
+                <label class="modal__label">
+                    <span class="modal__label-text">Телефон</span>
+                    <input class="modal__input" required name="phone" type="tel" placeholder="Введите ваш номер телефона">
+                </label>
+
+                <button class="modal__button">Заказать звонок</button>
+                <input class="modal__order" type="hidden" name="order">
+            </form>
         </div>
     </div>
 
-    <div class="overlay overlay_consultation">
+    <div class="overlay overlay__consultation">
         <div class="modal">
-            
+            <button class="modal__close">
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"/>
+                </svg>
+            </button>
+
+            <h2 class="modal__title">Заказать консультацию</h2>
+
+            <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <label class="modal__label">
+                    <span class="modal__label-text">ФИО</span>
+                    <input class="modal__input" required name="bio" type="text" placeholder="Введите ваше ФИО">
+                </label>
+
+                <label class="modal__label">
+                    <span class="modal__label-text">Телефон</span>
+                    <input class="modal__input" required name="phone" type="tel" placeholder="Введите ваш номер телефона">
+                </label>
+
+                <button class="modal__button">Заказать звонок</button>
+                <input class="modal__order" type="hidden" name="order">
+            </form>
         </div>
     </div>
 </body>
